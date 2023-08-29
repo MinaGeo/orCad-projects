@@ -1,0 +1,85 @@
+
+**** 01/12/22 13:56:24 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-polarity"  [ c:\users\hp\documents\orcad\invertingamplifier-pspicefiles\schematic1\polarity.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "polarity.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source INVERTINGAMPLIFIER
+E_U1         N00282 0 VALUE {LIMIT(V(0,N00188)*1E6,-15V,+15V)}
+R_R1         N00183 N00188 3k
+V_V1         N00183 0 3Vdc
+R_R2         N00188 N00282 24k
+
+**** RESUMING polarity.cir ****
+.END
+
+**** 01/12/22 13:56:24 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-polarity"  [ c:\users\hp\documents\orcad\invertingamplifier-pspicefiles\schematic1\polarity.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00183)    3.0000 (N00188)    1.0000 (N00282)  -15.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -6.667E-04
+
+    TOTAL POWER DISSIPATION   2.00E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 01/12/22 13:56:24 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-polarity"  [ c:\users\hp\documents\orcad\invertingamplifier-pspicefiles\schematic1\polarity.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+

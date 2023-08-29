@@ -1,0 +1,96 @@
+
+**** 01/10/22 03:01:59 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-dc"  [ C:\Users\HP\Documents\orCad\noninvertingamplifier-PSpiceFiles\SCHEMATIC1\dc.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "dc.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.06 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source NONINVERTINGAMPLIFIER
+E_U1         N00821 0 VALUE {LIMIT(V(0,N00811)*1E6,-15V,+15V)}
+R_R1         N00875 N00811 1k
+R_R2         N00811 N00821 10k
+V_V2         N00875 0  AC <0>
++SIN <0> <5> <100> 0 0 0
+
+**** RESUMING dc.cir ****
+.END
+
+**** 01/10/22 03:01:59 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-dc"  [ C:\Users\HP\Documents\orCad\noninvertingamplifier-PSpiceFiles\SCHEMATIC1\dc.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00811)    0.0000 (N00821)    0.0000 (N00875)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in Transient Analysis at Time =  .015.
+         Time step =  133.2E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(N00811)                 =   -43.80uV  \    15.68uV
+
+  These devices failed to converge:
+    E_U1      
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00811)-43.80E-06 (N00821)  -15.0000 (N00875)    1.5000 
+
+
+**** Interrupt ****

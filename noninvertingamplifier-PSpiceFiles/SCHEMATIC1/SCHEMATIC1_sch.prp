@@ -1,0 +1,265 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("OPAMP")
+        ("RESISTOR"
+            ("info"
+                ("spice_dsg"	"R")
+                ("port_order"
+                    ("A")
+                    ("B")
+                )
+            )
+            ("model_params"
+                ("level_0"
+                    ("TC1"
+                        ("value"	"0")
+                    )
+                    ("TC2"
+                        ("value"	"0")
+                    )
+                    ("VALUE"
+                        ("value"	"0")
+                    )
+                )
+            )
+            ("smoke"
+                ("pre_smoke"
+                    ("NODE_VA"	"A")
+                    ("NODE_VB"	"B")
+                    ("DERATE_TYPE"	"RES")
+                )
+                ("max_ops"
+                    ("RV"	"VOLTAGE")
+                    ("PDM"	"POWER")
+                    ("SLP"	"SLOPE")
+                    ("RBA"	"1/SLP")
+                    ("TMAX"	"MAX_TEMP")
+                    ("TB"	"TMAX")
+                    ("RTKNEE"	"TKNEE")
+                    ("RTRISE"	"TRISE")
+                )
+                ("smoke_tests"
+                    ("PDM"
+                        ("test"	"power_test")
+                    )
+                    ("RV"
+                        ("test"	"abs_voltage_test")
+                        ("nodes"
+                            ("NODE_VA")
+                            ("NODE_VB")
+                        )
+                    )
+                    ("TB"
+                        ("test"	"temp_null_test")
+                    )
+                )
+                ("device_max_ops")
+            )
+        )
+        ("VSIN")
+    )
+    ("instances"
+        ("U1"
+            ("device_name"	"OPAMP")
+            ("pspice_path"	"E_U1")
+            ("level"	"0")
+            ("model_params"
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("VPOS"
+                    ("value"	"+15V")
+                    ("pspice_param"	"VPOS")
+                )
+                ("VNEG"
+                    ("value"	"-15V")
+                    ("pspice_param"	"VNEG")
+                )
+                ("GAIN"
+                    ("value"	"1E6")
+                    ("pspice_param"	"GAIN")
+                )
+                ("Schematics' Source Library"
+                    ("value"	"E:\\library\\tmp\\analog.slb")
+                    ("pspice_param"	"Schematics' Source Library")
+                )
+            )
+        )
+        ("R1"
+            ("device_name"	"RESISTOR")
+            ("pspice_path"	"R_R1")
+            ("level"	"0")
+            ("tol_on_off"	"ON")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10k")
+                    ("pspice_param"	"VALUE")
+                    ("postol"	"RTOL%")
+                    ("negtol"	"RTOL%")
+                    ("distrib"	"FLAT")
+                )
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("TOL_ON_OFF"
+                    ("value"	"ON")
+                    ("pspice_param"	"TOL_ON_OFF")
+                )
+                ("POSTOL"
+                    ("value"	"RTOL%")
+                    ("pspice_param"	"POSTOL")
+                )
+                ("NEGTOL"
+                    ("value"	"RTOL%")
+                    ("pspice_param"	"NEGTOL")
+                )
+                ("DIST"
+                    ("value"	"FLAT")
+                    ("pspice_param"	"DIST")
+                )
+                ("POWER"
+                    ("value"	"RMAX")
+                    ("pspice_param"	"POWER")
+                )
+                ("VOLTAGE"
+                    ("value"	"RVMAX")
+                    ("pspice_param"	"VOLTAGE")
+                )
+                ("SLOPE"
+                    ("value"	"RSMAX")
+                    ("pspice_param"	"SLOPE")
+                )
+                ("MAX_TEMP"
+                    ("value"	"RTMAX")
+                    ("pspice_param"	"MAX_TEMP")
+                )
+                ("TC1"
+                    ("value"	"RTMPL")
+                    ("pspice_param"	"TC1")
+                )
+                ("TC2"
+                    ("value"	"RTMPQ")
+                    ("pspice_param"	"TC2")
+                )
+            )
+            ("smoke_vars"
+                ("POWER"	"0.25")
+                ("SLOPE"	"0.005")
+                ("MAX_TEMP"	"200.0")
+            )
+        )
+        ("R2"
+            ("device_name"	"RESISTOR")
+            ("pspice_path"	"R_R2")
+            ("level"	"0")
+            ("tol_on_off"	"ON")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"100k")
+                    ("pspice_param"	"VALUE")
+                    ("postol"	"RTOL%")
+                    ("negtol"	"RTOL%")
+                    ("distrib"	"FLAT")
+                )
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("TOL_ON_OFF"
+                    ("value"	"ON")
+                    ("pspice_param"	"TOL_ON_OFF")
+                )
+                ("POSTOL"
+                    ("value"	"RTOL%")
+                    ("pspice_param"	"POSTOL")
+                )
+                ("NEGTOL"
+                    ("value"	"RTOL%")
+                    ("pspice_param"	"NEGTOL")
+                )
+                ("DIST"
+                    ("value"	"FLAT")
+                    ("pspice_param"	"DIST")
+                )
+                ("POWER"
+                    ("value"	"RMAX")
+                    ("pspice_param"	"POWER")
+                )
+                ("VOLTAGE"
+                    ("value"	"RVMAX")
+                    ("pspice_param"	"VOLTAGE")
+                )
+                ("SLOPE"
+                    ("value"	"RSMAX")
+                    ("pspice_param"	"SLOPE")
+                )
+                ("MAX_TEMP"
+                    ("value"	"RTMAX")
+                    ("pspice_param"	"MAX_TEMP")
+                )
+                ("TC1"
+                    ("value"	"RTMPL")
+                    ("pspice_param"	"TC1")
+                )
+                ("TC2"
+                    ("value"	"RTMPQ")
+                    ("pspice_param"	"TC2")
+                )
+            )
+            ("smoke_vars"
+                ("POWER"	"0.25")
+                ("SLOPE"	"0.005")
+                ("MAX_TEMP"	"200.0")
+            )
+        )
+        ("V2"
+            ("device_name"	"VSIN")
+            ("pspice_path"	"V_V2")
+            ("level"	"0")
+            ("model_params"
+                ("AC"
+                    ("value"	"<0>")
+                    ("pspice_param"	"AC")
+                )
+                ("FREQ"
+                    ("value"	"<1000>")
+                    ("pspice_param"	"FREQ")
+                )
+                ("VOFF"
+                    ("value"	"<0>")
+                    ("pspice_param"	"VOFF")
+                )
+                ("VAMPL"
+                    ("value"	"<0.1>")
+                    ("pspice_param"	"VAMPL")
+                )
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("PSpice Model Type"
+                    ("value"	"0011")
+                    ("pspice_param"	"PSpice Model Type")
+                )
+                ("DC"
+                    ("value"	"")
+                    ("pspice_param"	"DC")
+                )
+                ("TD"
+                    ("value"	"0")
+                    ("pspice_param"	"TD")
+                )
+                ("DF"
+                    ("value"	"0")
+                    ("pspice_param"	"DF")
+                )
+                ("PHASE"
+                    ("value"	"0")
+                    ("pspice_param"	"PHASE")
+                )
+            )
+        )
+    )
+)

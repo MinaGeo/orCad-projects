@@ -1,0 +1,6 @@
+* source AC-NON-INVERTING
+R_R2         N01098 N01108 100k
+E_U1         N01108 0 VALUE {LIMIT(V(N01216,N01098)*1E6,-15V,+15V)}
+R_R1         0 N01098 10k
+V_V2         N01216 0  AC <0>
++SIN <0> <0.1> <1000> 0 0 0

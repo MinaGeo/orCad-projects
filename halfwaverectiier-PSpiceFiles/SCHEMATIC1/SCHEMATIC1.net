@@ -1,0 +1,5 @@
+* source HALFWAVERECTIIER
+V_V1         N00467 0  AC {0}
++SIN {0} {10} {1000} 0 0 0
+D_D1         N00467 N00474 D1N4148 
+R_R1         0 N00474 10k
